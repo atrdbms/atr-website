@@ -96,6 +96,21 @@
   .group-title{font-family:Inter,sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-dk);margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
   .group-title:first-of-type{margin-top:0}
 
+  /* ATR DBMS highlight */
+  .dbms-sec{padding:40px 0}
+  .dbms{display:flex;align-items:center;gap:22px;text-decoration:none;color:#fff;border-radius:18px;padding:26px 30px;
+    background:linear-gradient(120deg,#1C1A17 0%,#3A2A1B 60%,#9A4A10 100%);box-shadow:0 14px 34px rgba(28,26,23,.22);transition:transform .15s,box-shadow .15s}
+  .dbms:hover,.dbms:focus-visible{transform:translateY(-3px);box-shadow:0 18px 40px rgba(28,26,23,.3)}
+  .dbms-ic{flex:none;width:76px;height:76px;border-radius:18px;background:var(--amber);display:grid;place-items:center}
+  .dbms-ic svg{width:42px;height:42px}
+  .dbms-txt{flex:1;display:flex;flex-direction:column}
+  .dbms-txt small{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F0B37A}
+  .dbms-txt b{font-family:Fraunces,Georgia,serif;font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.15}
+  .dbms-txt span{color:#E4DBCD;font-size:.98rem}
+  .dbms-go{flex:none;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:700;padding:12px 20px;border-radius:999px}
+  .dbms-go svg{width:18px;height:18px}
+  @media (max-width:640px){.dbms{flex-direction:column;align-items:flex-start;padding:22px}.dbms-go{align-self:stretch;justify-content:center}}
+
   /* Measures list */
   .measures{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
   .measure{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
@@ -222,7 +237,7 @@
 <nav class="main" aria-label="Main">
   <div class="wrap">
     <a href="#home">Home</a>
-    <a href="#modules">Modules</a>
+    <a href="#modules">ATR DBMS</a>
     <a href="#tigers">Tigers</a>
     <a href="#prey">Prey</a>
     <a href="#plastic">Plastic clean-up</a>
@@ -248,34 +263,14 @@
   </div>
 </div>
 
-<!-- ICON MODULES -->
-<section id="modules">
+<!-- ATR DBMS -->
+<section id="modules" class="dbms-sec">
   <div class="wrap">
-    <h3 class="group-title">Achievements</h3>
-    <div class="modules">
-      <a class="tile" href="#tigers"><img src="assets/gallery/thumb-01.jpg" alt=""><span class="label"><i><svg><use href="#i-tiger"/></svg></i><b>Tiger Recovery<small>7 to 42 tigers</small></b></span></a>
-      <a class="tile plain" href="#prey"><span class="big"><svg><use href="#i-deer"/></svg></span><span class="label"><i><svg><use href="#i-deer"/></svg></i><b>Prey Density<small>11.76 per sq km</small></b></span></a>
-      <a class="tile" href="#plastic"><img src="assets/photos/segregating-plastic.jpg" alt=""><span class="label"><i><svg><use href="#i-recycle"/></svg></i><b>Swachh Sevaks<small>~75 t plastic baled</small></b></span></a>
-      <a class="tile plain" href="#jute"><span class="big"><svg><use href="#i-bag"/></svg></span><span class="label"><i><svg><use href="#i-bag"/></svg></i><b>Jute Bag Making<small>20,000-30,000 bags a year</small></b></span></a>
-      <a class="tile plain" href="#health"><span class="big"><svg><use href="#i-health"/></svg></span><span class="label"><i><svg><use href="#i-health"/></svg></i><b>Apollo Health<small>1 lakh+ patient services</small></b></span></a>
-    </div>
-
-    <h3 class="group-title">Conservation measures</h3>
-    <div class="modules">
-      <a class="tile plain" href="#m-breeding"><span class="big"><svg><use href="#i-paw"/></svg></span><span class="label"><i><svg><use href="#i-paw"/></svg></i><b>Breeding Tigresses<small>F6, F18, F7</small></b></span></a>
-      <a class="tile plain" href="#m-water"><span class="big"><svg><use href="#i-water"/></svg></span><span class="label"><i><svg><use href="#i-water"/></svg></i><b>Water All Year<small>40 solar bore wells</small></b></span></a>
-      <a class="tile plain" href="#m-prey"><span class="big"><svg><use href="#i-leaf"/></svg></span><span class="label"><i><svg><use href="#i-leaf"/></svg></i><b>Prey Augmentation<small>35 ha centre</small></b></span></a>
-      <a class="tile plain" href="#m-grass"><span class="big"><svg><use href="#i-grass"/></svg></span><span class="label"><i><svg><use href="#i-grass"/></svg></i><b>Grasslands<small>~5,000 ha restored</small></b></span></a>
-      <a class="tile plain" href="#m-protect"><span class="big"><svg><use href="#i-shield"/></svg></span><span class="label"><i><svg><use href="#i-shield"/></svg></i><b>Protection<small>29 anti-poaching camps</small></b></span></a>
-    </div>
-
-    <h3 class="group-title">Explore</h3>
-    <div class="modules">
-      <a class="tile" href="#gallery"><img src="assets/gallery/thumb-11.jpg" alt=""><span class="label"><i><svg><use href="#i-camera"/></svg></i><b>Camera-trap Gallery<small>Tigers, leopards &amp; more</small></b></span></a>
-      <a class="tile plain" href="#about"><span class="big"><svg><use href="#i-map"/></svg></span><span class="label"><i><svg><use href="#i-map"/></svg></i><b>About the Reserve<small>Nallamala hills</small></b></span></a>
-      <a class="tile plain" href="https://atrdbms.github.io/atr-dbms/"><span class="big"><svg><use href="#i-db"/></svg></span><span class="label"><i><svg><use href="#i-db"/></svg></i><b>ATR DBMS<small>Staff login</small></b></span></a>
-      <a class="tile plain" href="https://atrdbms.github.io/atr-employee/"><span class="big"><svg><use href="#i-people"/></svg></span><span class="label"><i><svg><use href="#i-people"/></svg></i><b>Employee Database<small>Staff login</small></b></span></a>
-    </div>
+    <a class="dbms" href="https://atrdbms.github.io/atr-dbms/">
+      <span class="dbms-ic"><svg><use href="#i-db"/></svg></span>
+      <span class="dbms-txt"><small>Staff portal</small><b>ATR DBMS</b><span>Amrabad Tiger Reserve Database Monitoring System</span></span>
+      <span class="dbms-go">Open ATR DBMS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
   </div>
 </section>
 
@@ -487,8 +482,8 @@
       <ul><li><a href="#tigers">Tigers: 7 to 42</a></li><li><a href="#prey">Prey density</a></li><li><a href="#plastic">Swachh Sevaks</a></li><li><a href="#jute">Jute bag making</a></li><li><a href="#health">Apollo health initiative</a></li></ul>
     </div>
     <div>
-      <h4>Staff links</h4>
-      <ul><li><a href="https://atrdbms.github.io/atr-dbms/">ATR DBMS</a></li><li><a href="https://atrdbms.github.io/atr-employee/">ATR Employee Database</a></li></ul>
+      <h4>Staff portal</h4>
+      <ul><li><a href="https://atrdbms.github.io/atr-dbms/">ATR DBMS</a></li></ul>
     </div>
     <div class="base">© Amrabad Tiger Reserve, Telangana Forest Department. Figures from ATR monitoring and programme records, 2017 to 2026.</div>
   </div>
